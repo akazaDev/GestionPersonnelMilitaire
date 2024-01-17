@@ -26,7 +26,25 @@ public class AddDeleteSoldier {
     }
 
     public static void deleteSoldier(){
+        //int matricule = verifyMatricule();
+        //METHODE QUI RENVOIE UNE PERSONNE EN FONCTION DE SON MATRICULE
+        //Soldier soldat = searchSoldat();
+        System.out.println("Etes vous sûre de vouloir supprimer le soldat " + /*soldat.toString + */" ?");
+        System.out.print("o pour OUI , n pour NON : ");
+        String choix = scanner.nextLine().toLowerCase();
 
+        switch (choix){
+            case "o":
+                //METHODE POUR SUPPRIMER UNE PERSONNE DE LA BASE DE DONNEES
+                break;
+            case "n":
+                System.out.println("OPERATION ANNULEE !");
+                break;
+            default:
+                System.out.println("choix incorrect :");
+                deleteSoldier();
+                break;
+        }
     }
 
     /*public static int verifyMatricule(){
